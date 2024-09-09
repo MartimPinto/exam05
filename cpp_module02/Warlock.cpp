@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:09:38 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 16:52:45 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/09 15:59:43 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,6 @@ void Warlock::introduce() const
 Warlock::~Warlock()
 {
 	std::cout << _name << ": My job here is done!" << std::endl;
-	for (std::map<std::string, ASpell *>::iterator it = _spellBook.begin(); it != _spellBook.end(); ++it)
-		delete it->second;
-	_spellBook.clear();
 }
 
 void Warlock::learnSpell(ASpell *spell)
