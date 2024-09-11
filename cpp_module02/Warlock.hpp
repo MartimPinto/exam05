@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:01:12 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 15:58:57 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:05:02 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 #include <map>
 #include "ASpell.hpp"
 #include "ATarget.hpp"
+#include "SpellBook.hpp"
 
 class Warlock
 {
 	private:
 			std::string _name;
 			std::string _title;
-			std::map<std::string, ASpell*> _spellBook;
+			SpellBook _spellBook;
 			
 			Warlock();
 			Warlock(const Warlock &src);

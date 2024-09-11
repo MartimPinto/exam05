@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:09:38 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 15:59:43 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:06:40 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,19 +60,17 @@ void Warlock::learnSpell(ASpell *spell)
 {
 	if(spell)
 	{
-		if(_spellBook.find(spell->getName()) == _spellBook.end())
-			_spellBook[spell->getName()] = spell->clone();
+		_spellBook.learnSpell(spell);
 	}
 }
 
 void Warlock::forgetSpell(std::string name)
 {
-	if (_spellBook.find(name) != _spellBook.end())
-		_spellBook.erase(_spellBook.find(name));
+	_spellBook.forgetSpell(name);
 }
 
 void Warlock::launchSpell(std::string name, ATarget &target)
 {
-	if (_spellBook.find(name) != _spellBook.end())
-		_spellBook[name]->launch(target);
+	if (_spellBook.createSpell(name))
+		_spellBook.createSpell(name)->launch(target);
 }
