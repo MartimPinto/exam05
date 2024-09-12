@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:09:38 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 16:52:45 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:22:27 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 Warlock::Warlock(){}
 
-Warlock::Warlock(std::string name, std::string title): _name(name), _title(title)
+Warlock::Warlock(const std::string &name, const std::string &title): _name(name), _title(title)
 {
-	std::cout << _name << ": This looks like another boring day." << std::endl;
+	std::cout << _name << ": This looks like another boring day." <<std::endl;
 }
 
 Warlock::Warlock(const Warlock &src)
@@ -74,7 +74,7 @@ void Warlock::forgetSpell(std::string name)
 		_spellBook.erase(_spellBook.find(name));
 }
 
-void Warlock::launchSpell(std::string name, ATarget &target)
+void Warlock::launchSpell(std::string name, const ATarget &target)
 {
 	if (_spellBook.find(name) != _spellBook.end())
 		_spellBook[name]->launch(target);

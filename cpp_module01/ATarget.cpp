@@ -6,13 +6,13 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 14:28:40 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 14:57:09 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:20:44 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ATarget.hpp"
 
-ATarget::ATarget(std::string type): _type(type){}
+ATarget::ATarget(const std::string &type): _type(type){}
 
 ATarget::ATarget(const ATarget &src)
 {

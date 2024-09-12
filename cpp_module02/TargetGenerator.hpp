@@ -5,27 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 12:08:01 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/11 12:54:44 by mcarneir         ###   ########.fr       */
+/*   Created: 2024/09/12 13:52:01 by mcarneir          #+#    #+#             */
+/*   Updated: 2024/09/12 13:57:12 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include <map>
 #include "ATarget.hpp"
+#include <map>
 
 class TargetGenerator
 {
 	private:
-			std::map<std::string, ATarget*> _targets;
+			std::map<std::string, ATarget *> _targets;
 			TargetGenerator(const TargetGenerator &src);
-			TargetGenerator &operator=(const TargetGenerator &rhs);
-
+			TargetGenerator &operator=(const TargetGenerator &src);
 	public:
 			TargetGenerator();
 			~TargetGenerator();
 			void learnTargetType(ATarget *target);
-			void forgetTargetType(std::string const &name);
-			ATarget* createTarget(std::string const &name);	
+			void forgetTargetType(std::string const &type);
+			ATarget* createTarget(std::string const &target);	
 };

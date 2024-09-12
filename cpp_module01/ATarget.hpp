@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 13:04:52 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 16:08:08 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:20:33 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ATarget
 		protected:
 					std::string _type;
 		public:
-				ATarget(std::string type);
+				ATarget(const std::string &type);
 				ATarget(const ATarget &src);
 				ATarget &operator=(const ATarget &rhs); 
 				const std::string &getType() const;

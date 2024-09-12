@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 12:54:33 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/09/09 16:08:52 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/09/12 12:20:01 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ASpell
 				std::string _name;
 				std::string _effects;
 	public:
-			ASpell(std::string name, std::string effects);
+			ASpell(const std::string &name, const std::string &effects);
 			ASpell(const ASpell &src);
 			ASpell &operator=(const ASpell &rhs);
 			std::string getName() const;
